@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cstdlib>
+#include <math.h>
+using namespace std;
+main(){
+char x;
+float a,b,c;
+cout<<"podaj pierwsza liczbe (a)"<<endl;
+cin>>a;
+cout<<"podaj druga liczbe (b)"<<endl;
+cin>>b;
+if(a==0||b==0){
+    cout<<"ktoras z liczb wynosi zero";
+}
+else{
+cout<<"jakie dzialanie chcesz wykonac? + - * / %"<<endl;
+
+
+cin>>x;
+switch(x){
+case '+': cout<<"wartosc dodawania "<<a<<" + "<<b<<" wynosi "<<a+b<<endl;
+break;
+case '-': cout<<"wartosc odejmowania "<<a<<" - "<<b<<" wynosi "<<a-b<<endl;
+break;
+case '*': cout<<"wartosc mnozenia "<<a<<" * "<<b<<" wynosi "<<a*b<<endl;
+break;
+case '/': cout<<"wartosc dzielenia "<<a<<" / "<<b<<" wynosi "<<a/b<<endl;
+break;
+case '%':
+	c=fmod(a,b);
+	cout<<"wartosc dzielenia "<<a<<" / "<<b<<" wynosi "<<c<<endl;
+
+default:cout<<"Wprowadz poprawny znak";
+break;
+}
+}
+system ("PAUSE");
+
+
+return 0;}
